@@ -25,7 +25,7 @@ public class Users {
     // Delete user from repository
     // Throw  RuntimeException if the user is not in the list
     public void remove(IUser user) throws RuntimeException {
-        if(userList.remove(user))
+        if(!userList.remove(user))
             throw new RuntimeException(String.format("User[%s] is not in the list", user.getName()));
     }
 
