@@ -30,6 +30,11 @@ public class User implements IUser {
     }
 
     @Override
+    public boolean isNameCorrect(String name) {
+        return false;
+    }
+
+    @Override
     public String setPassword(String password) {
         if (isPasswordCorrect(password))
             this.password = password;
@@ -51,5 +56,10 @@ public class User implements IUser {
     public void setType(int type) {
         if (type == USER_STUDENT || type == USER_TEACHER)
         this.type = type;
+    }
+
+    @Override
+    public void setType(int type) {
+
     }
 }
