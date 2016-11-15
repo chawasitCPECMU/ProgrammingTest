@@ -10,7 +10,6 @@ public class User implements IUser {
         password = null;
     }
 
-
     @Override
     public String getName() {
         return username;
@@ -27,11 +26,6 @@ public class User implements IUser {
     public boolean isNameCorrect(String name) {
         if (name == null) return false;
         return name.matches(NAME_CHECK);
-    }
-
-    @Override
-    public boolean isNameCorrect(String name) {
-        return false;
     }
 
     @Override
@@ -55,11 +49,6 @@ public class User implements IUser {
     @Override
     public void setType(int type) {
         if (type == USER_STUDENT || type == USER_TEACHER)
-        this.type = type;
-    }
-
-    @Override
-    public void setType(int type) {
-
+            this.type = type;
     }
 }
