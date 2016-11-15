@@ -6,6 +6,10 @@ public class Users {
     // User repository
     private ArrayList<IUser> userList;
 
+    public Users() {
+        userList = new ArrayList<>();
+    }
+
     // Create new user with type, name and password
     // user created with this method should be automatically added to userList;
     public IUser create(int type, String name, String password) {
