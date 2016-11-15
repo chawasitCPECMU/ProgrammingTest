@@ -10,6 +10,11 @@ public class User implements IUser {
     }
 
     @Override
+    public boolean isNameCorrect(String name) {
+        return false;
+    }
+
+    @Override
     public String setPassword(String password) {
         return null;
     }
@@ -22,5 +27,10 @@ public class User implements IUser {
     @Override
     public int getType() {
         return 0;
+    }
+
+    @Override
+    public void setType(int type) {
+
     }
 }
